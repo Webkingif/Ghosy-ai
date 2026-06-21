@@ -4,11 +4,11 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- 02-canvas-architecture
+- 02-editor-chrome
 
 ## Current Goal
 
-- Formulate the canvas structure and schemas for the interactive real-time visual system builder.
+- Implement the visual Editor Chrome, including the Editor Navbar, Project Sidebar overlay, and build standard dark-theme dialog patterns.
 
 ## Completed
 
@@ -16,11 +16,11 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## In Progress
 
-- Refined canvas architecture planning.
+- Building the base Editor Chrome (Editor Navbar with Sidebar Toggle and Project Sidebar with active overlay sliding and tab selectors).
 
 ## Next Up
 
-- Implementation of core collaborative system architecture and canvas wrappers.
+- Phase 03: Collaborative Canvas (Integrating Liveblocks and React Flow wrappers into the editing space).
 
 ## Open Questions
 

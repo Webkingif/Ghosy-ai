@@ -1,6 +1,6 @@
 {
-  "name": "Hello World",
-  "description": "A beautiful, premium Hello World screen designed with Locky brand identity.",
+  "name": "Ghosy AI",
+  "description": "A real-time collaborative system design workspace to design systems visually and generate technical specifications.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
