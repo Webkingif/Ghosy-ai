@@ -1,11 +1,9 @@
 import type {Metadata} from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
-import './globals.css'; // Global styles
+import { Inter, Playfair_Display, Geist } from 'next/font/google';
+import './globals.css';
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -20,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={cn(playfair.variable, "font-sans", geist.variable)}>
       <head>
         <link
           rel="stylesheet"
@@ -30,7 +28,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           referrerPolicy="no-referrer"
         />
       </head>
-      <body className="font-sans antialiased text-slate-900 bg-[#F5F2ED] selection:bg-[#FFD400] selection:text-[#0d00a4]" suppressHydrationWarning>
+      <body className="font-sans antialiased bg-base text-primary selection:bg-brand selection:text-base animate-fade-in" suppressHydrationWarning>
         {children}
       </body>
     </html>
