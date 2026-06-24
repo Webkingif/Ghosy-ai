@@ -207,7 +207,7 @@ export default function EditorPage() {
                     Project Slug Preview
                   </span>
                   <div className="text-xs font-mono text-brand/80 truncate py-1.5 px-3 bg-brand/5 border border-brand/10 rounded-lg select-all">
-                    ghostai.com/project/{formState.slug || "your-slug-here"}
+                    {formState.slug || "your-slug-here"}
                   </div>
                 </div>
 
@@ -278,7 +278,7 @@ export default function EditorPage() {
                     Project Slug Preview
                   </span>
                   <div className="text-xs font-mono text-brand/80 truncate py-1.5 px-3 bg-brand/5 border border-brand/10 rounded-lg select-all">
-                    ghostai.com/project/{formState.slug || "your-slug-here"}
+                    {formState.slug || "your-slug-here"}
                   </div>
                 </div>
 

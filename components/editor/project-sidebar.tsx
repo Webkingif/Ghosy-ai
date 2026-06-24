@@ -128,8 +128,8 @@ export function ProjectSidebar({
                                     </div>
                                   </div>
                                   
-                                  {/* Actions - show rename/delete buttons on hover/group-hover */}
-                                  <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity pl-2 shrink-0">
+                                  {/* Actions - show rename/delete buttons always */}
+                                  <div className="flex items-center gap-0.5 pl-2 shrink-0">
                                     <Button
                                       variant="ghost"
                                       size="icon-xs"
