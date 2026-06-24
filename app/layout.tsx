@@ -2,6 +2,8 @@ import type {Metadata} from 'next';
 import { Inter, Playfair_Display, Geist } from 'next/font/google';
 import './globals.css';
 import { cn } from "@/lib/utils";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/ui/themes";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -29,7 +31,23 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         />
       </head>
       <body className="font-sans antialiased bg-base text-primary selection:bg-brand selection:text-base animate-fade-in" suppressHydrationWarning>
-        {children}
+        <ClerkProvider
+          appearance={{
+            theme: dark,
+            variables: {
+              colorPrimary: 'var(--accent-primary)',
+              colorBackground: 'var(--bg-surface)',
+              colorForeground: 'var(--text-primary)',
+              colorMutedForeground: 'var(--text-secondary)',
+              colorInput: 'var(--bg-base)',
+              colorInputForeground: 'var(--text-primary)',
+              colorBorder: 'var(--border-default)',
+              fontFamily: 'var(--font-sans)',
+            }
+          }}
+        >
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );
