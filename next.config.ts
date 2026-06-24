@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
     ],
   },
   output: 'standalone',
+  experimental: {
+    serverActions: {
+      allowedOrigins: [
+        '*.run.app',
+        '*.europe-west2.run.app',
+        'localhost:3000',
+      ],
+    },
+  },
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
