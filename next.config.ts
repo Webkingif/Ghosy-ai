@@ -25,6 +25,9 @@ const nextConfig: NextConfig = {
       allowedOrigins: [
         '*.run.app',
         '*.europe-west2.run.app',
+        '*.github.dev',
+        '*.app.github.dev',
+        '*.gitpod.io',
         'localhost:3000',
       ],
     },

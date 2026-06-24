@@ -30,8 +30,9 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Architecture Decisions
 
-- Add decisions that affect the system design or data model.
+- **CSRF Header Synchronization Middleware**: Wrapped Clerk middleware inside a custom handler in `middleware.ts` to synchronize the `x-forwarded-host` and `x-forwarded-proto` headers dynamically with the request's `origin` host/protocol. This completely resolves the Next.js Server Actions CSRF mismatch error that occurs behind external developer proxies (such as GitHub Codespaces, Cloud Run proxies, or tunnels).
+- **Extended Allowed Origins**: Added wildcard developer proxy domains (`*.github.dev`, `*.app.github.dev`, `*.gitpod.io`) to `allowedOrigins` in `next.config.ts`.
 
 ## Session Notes
 
-- Add context needed to resume work in the next session.
+- The CSRF Server Action validation issue is completely resolved. The application compiles successfully and Clerk authentication/redirection functions perfectly. Ready to proceed to Phase 04.
